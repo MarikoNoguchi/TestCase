@@ -12,7 +12,7 @@ import org.junit.Test;
 public class SnakecamelTest {
 
 	@Test
-	public void test() {
+	public void キャメルからスネイクに() {
 		SnakeCamelUtil sc = new SnakeCamelUtil();
 		String expected  = "HopStepJump";
 		String actual = sc.snakeToCamelcase("hop_step_jump");
