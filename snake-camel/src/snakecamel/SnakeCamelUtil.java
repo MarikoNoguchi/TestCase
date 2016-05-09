@@ -3,7 +3,12 @@ package snakecamel;
 public class SnakeCamelUtil {
 
 	public static String snakeToCamelcase(String snake_case) {
-		String[] words = snake_case.split("_");
+			for(int i=0; i<snake_case.length(); i++){
+				if(!snake_case.startsWith("_")) break;
+				snake_case = snake_case.substring(1);
+			}
+		
+		String[] words = snake_case.split("[_]+");
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < words.length ; i++) {
 			sb.append(capitalize(words[i]));
